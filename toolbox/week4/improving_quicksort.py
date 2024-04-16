@@ -14,7 +14,6 @@ def partition3(a, l, r):
             a[t], a[i] = a[i], a[t]
             t -= 1
             i -= 1 # remain in the same i in this case
-        print(a)
         i += 1
     return j, t
 
