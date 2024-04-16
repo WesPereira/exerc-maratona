@@ -2,20 +2,21 @@ from random import randint
 
 
 def partition3(a, l, r):
-   x, j, t = a[l], l, r
-   i = j
+    x, j, t = a[l], l, r
+    i = j
 
-   while i <= t :
-      if a[i] < x:
-         a[j], a[i] = a[i], a[j]
-         j += 1
+    while i <= t :
+        if a[i] < x:
+            a[j], a[i] = a[i], a[j]
+            j += 1
 
-      elif a[i] > x:
-         a[t], a[i] = a[i], a[t]
-         t -= 1
-         i -= 1 # remain in the same i in this case
-      i += 1   
-   return j, t
+        elif a[i] > x:
+            a[t], a[i] = a[i], a[t]
+            t -= 1
+            i -= 1 # remain in the same i in this case
+        print(a)
+        i += 1
+    return j, t
 
 
 def randomized_quick_sort(array, left, right):
